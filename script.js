@@ -1955,9 +1955,11 @@ function bindMessagesPage() {
 
     addMessage(createChatMessage("user", text));
     input.value = "";
+    updateKeyboardOffset();
 
     window.setTimeout(() => {
       addMessage(createChatMessage("bot", pickSupportReply(text)));
+      updateKeyboardOffset();
     }, 520);
   });
 
@@ -1971,15 +1973,27 @@ function bindMessagesPage() {
   const updateKeyboardOffset = () => {
     if (!page?.classList.contains("is-keyboard-open")) return;
     const viewport = window.visualViewport;
-    const viewportOffset = viewport
+    const host = document.querySelector(".app-screen") || page;
+    const hostRect = host.getBoundingClientRect();
+    const isPhone = window.matchMedia("(max-width: 640px)").matches;
+    const visualKeyboard = viewport
       ? Math.max(0, window.innerHeight - viewport.height - viewport.offsetTop)
       : 0;
-    const fallbackOffset = window.matchMedia("(max-width: 640px)").matches ? 190 : 0;
-    const offset = Math.min(Math.max(viewportOffset, fallbackOffset), 340);
-    root.style.setProperty("--keyboard-offset", `${offset}px`);
+    const fallbackKeyboard = isPhone ? 330 : 0;
+    const keyboardOffset = Math.min(Math.max(visualKeyboard, fallbackKeyboard), 460);
+    const visibleBottom = Math.max(0, window.innerHeight - keyboardOffset);
+    const formHeight = Math.max(68, form.getBoundingClientRect().height || 68);
+    const top = Math.max(8, visibleBottom - formHeight - 12);
+    const left = Math.max(10, hostRect.left + 12);
+    const width = Math.max(260, Math.min(hostRect.width - 24, window.innerWidth - 20));
+
+    root.style.setProperty("--keyboard-offset", `${keyboardOffset}px`);
+    root.style.setProperty("--message-fixed-top", `${top}px`);
+    root.style.setProperty("--message-fixed-left", `${left}px`);
+    root.style.setProperty("--message-fixed-width", `${width}px`);
     window.setTimeout(() => {
       scrollChatToBottom(chatMessages);
-      form.scrollIntoView({ block: "nearest", behavior: "smooth" });
+      input.scrollIntoView({ block: "center", behavior: "smooth" });
     }, 60);
   };
 
@@ -1992,6 +2006,9 @@ function bindMessagesPage() {
     window.setTimeout(() => {
       page?.classList.remove("is-keyboard-open");
       root.style.removeProperty("--keyboard-offset");
+      root.style.removeProperty("--message-fixed-top");
+      root.style.removeProperty("--message-fixed-left");
+      root.style.removeProperty("--message-fixed-width");
     }, 180);
   });
 
