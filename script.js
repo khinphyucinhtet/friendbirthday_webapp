@@ -1237,7 +1237,7 @@ function renderThemePage(pageId) {
             <p class="profile-copy">A little glowing corner of the app just for you.</p>
             <div class="profile-actions">
               <input class="profile-upload-input sr-only" id="profile-upload-input" type="file" accept="image/*" />
-              <button class="profile-action-button is-primary" id="profile-upload-button" type="button">Upload</button>
+              <label class="profile-action-button is-primary" id="profile-upload-button" for="profile-upload-input" role="button" tabindex="0">Upload</label>
               <button class="profile-action-button" id="profile-remove-button" type="button">Remove</button>
             </div>
           </section>
@@ -1588,7 +1588,7 @@ function renderFooterLink(item) {
 
 function bindPageBehaviors() {
   if (PAGE === "splash-1") {
-    window.setTimeout(() => navigateTo("splash-2"), 3000);
+    window.setTimeout(() => navigateTo("splash-2"), 5500);
     return;
   }
 
@@ -1630,7 +1630,7 @@ function runSplashTwoProgress() {
   if (!fill || !label) return;
 
   const start = performance.now();
-  const duration = 4000;
+  const duration = 5500;
 
   const step = (now) => {
     const ratio = Math.min((now - start) / duration, 1);
@@ -1703,10 +1703,11 @@ function bindProfileUploader() {
   const input = document.getElementById("profile-upload-input");
   if (!uploadButton || !removeButton || !input) return;
 
-  uploadButton.addEventListener("click", () => {
-    const allowed = window.confirm("Allow access to your photos to upload a profile picture?");
-    if (!allowed) return;
-    input.click();
+  uploadButton.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      input.click();
+    }
   });
 
   input.addEventListener("change", () => {
@@ -1926,6 +1927,9 @@ function bindMessagesPage() {
   const input = document.getElementById("messageInput");
   if (!chatMessages || !form || !input) return;
 
+  const page = document.querySelector(".messages-page");
+  const root = document.documentElement;
+
   let messages = loadMessages();
   if (messages.length === 0) {
     messages = [createChatMessage("bot", DEFAULT_CHAT_MESSAGE)];
@@ -1963,6 +1967,36 @@ function bindMessagesPage() {
       form.requestSubmit();
     }
   });
+
+  const updateKeyboardOffset = () => {
+    if (!page?.classList.contains("is-keyboard-open")) return;
+    const viewport = window.visualViewport;
+    const viewportOffset = viewport
+      ? Math.max(0, window.innerHeight - viewport.height - viewport.offsetTop)
+      : 0;
+    const fallbackOffset = window.matchMedia("(max-width: 640px)").matches ? 190 : 0;
+    const offset = Math.min(Math.max(viewportOffset, fallbackOffset), 340);
+    root.style.setProperty("--keyboard-offset", `${offset}px`);
+    window.setTimeout(() => {
+      scrollChatToBottom(chatMessages);
+      form.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    }, 60);
+  };
+
+  input.addEventListener("focus", () => {
+    page?.classList.add("is-keyboard-open");
+    updateKeyboardOffset();
+  });
+
+  input.addEventListener("blur", () => {
+    window.setTimeout(() => {
+      page?.classList.remove("is-keyboard-open");
+      root.style.removeProperty("--keyboard-offset");
+    }, 180);
+  });
+
+  window.visualViewport?.addEventListener("resize", updateKeyboardOffset);
+  window.visualViewport?.addEventListener("scroll", updateKeyboardOffset);
 
   renderChat();
 }
