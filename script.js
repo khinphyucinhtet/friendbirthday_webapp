@@ -742,6 +742,99 @@ const CHAT_REPLY_BUCKETS = {
     "Tone Tone the best, but even the best need sleep.",
     "You deserve rest without guilt."
   ],
+  lazy: [
+    "Don’t be lazy, don’t be stupid, do one tiny step first. I say this with love.",
+    "Tone Tone, get up a little. Five minutes only. After that you can complain beautifully.",
+    "No full dramatic shutdown yet. Open the thing, touch the thing, start the thing.",
+    "Lazy mood is temporary. Your future rich-pretty-girl life needs one small action.",
+    "Don’t wait for motivation. Drag yourself cutely for five minutes.",
+    "You can be lazy after you finish one tiny task. Deal?",
+    "Stop bargaining with your own brain and just start the smallest part.",
+    "Tone Tone, you are not weak. You are just avoiding the first step.",
+    "Do it badly first. Perfect can arrive later wearing lip gloss.",
+    "Don’t let lazy win. Lazy is loud but you are louder.",
+    "One page, one email, one shower, one tiny task. Choose one and defeat it.",
+    "Be dramatic after progress, not before progress.",
+    "You’re allowed to feel lazy, but you are not allowed to abandon yourself.",
+    "Come on Rose, even main characters have to do chores sometimes.",
+    "I know you don’t want to, but do it anyway for the future Tone Tone who will thank you."
+  ],
+  motivation: [
+    "You can do this. Not all at once, but absolutely one step at a time.",
+    "Your future self is waiting with flowers, so please keep walking.",
+    "You are stronger than the mood that is trying to stop you.",
+    "Start messy. Messy progress still counts.",
+    "You don’t need a perfect day to make a good choice.",
+    "Tone Tone, you have survived harder chapters than this.",
+    "One tiny brave action can change the whole mood.",
+    "You are not behind. You are becoming.",
+    "Move gently, but move.",
+    "Your effort today is a love letter to your future.",
+    "You are capable even when you feel unready.",
+    "The first step is allowed to be ugly. Take it anyway.",
+    "You have main character energy, but main characters still do the work.",
+    "You are not starting from zero. You are starting from everything you already survived.",
+    "Do it for the version of you who deserves peace later."
+  ],
+  honest: [
+    "Honest opinion: you are overthinking a little, but your feeling itself is valid.",
+    "Real talk: choose the option that protects your peace, not just your ego.",
+    "My honest answer is yes, but do it calmly and don’t spiral after.",
+    "Be real with yourself first. Are you choosing this from love or panic?",
+    "Honestly, you deserve better than crumbs and confusion.",
+    "Real answer: rest if you’re tired, act if you’re avoiding.",
+    "Honest but gentle: you already know the answer, you just want permission.",
+    "My opinion: don’t shrink yourself to make someone else comfortable.",
+    "Real talk, Tone Tone: stop doubting the obvious good thing about you.",
+    "Honestly? You are doing better than you think, but you need to stop bullying yourself.",
+    "My honest take: say less, observe more, protect your softness.",
+    "Truthfully, if it keeps making you anxious, it deserves boundaries.",
+    "Honest answer: you can be kind without letting people drain you.",
+    "Be honest with your heart, but don’t let your fear drive the car.",
+    "Real talk: choose the calm option, not the dramatic option."
+  ],
+  bored: [
+    "Bored Tone Tone needs a tiny reset: water, music, one cute plan.",
+    "Do something small and pretty. Even lighting a candle counts.",
+    "If you’re bored, your brain is asking for a new scene. Change rooms if you can.",
+    "Play one song and pretend you’re in a music video. Free therapy.",
+    "Boredom is just your sparkle looking for a job.",
+    "Take a selfie, clean one corner, or make tea. Any of those counts.",
+    "Your bored era can become your soft-reset era.",
+    "Go touch grass metaphorically or literally.",
+    "Make a tiny plan. Bored brains need structure, not doom scrolling only.",
+    "Do one thing that makes future you say thank you.",
+    "Bored? Time to romanticize your life for five minutes.",
+    "You need music and one cute little mission."
+  ],
+  food: [
+    "Eat something, Rose. Pretty girls still need fuel.",
+    "Please don’t survive on vibes only. Get food.",
+    "If you’re hungry, every problem becomes 40% more dramatic.",
+    "Snack first, life decisions later.",
+    "Drink water too. I’m being lovingly annoying about it.",
+    "Get something warm if you can. Your body deserves comfort.",
+    "Coffee is not a full personality or a full meal.",
+    "Eat first, then decide if the world is ending.",
+    "Your brain may simply be asking for food, not a crisis meeting.",
+    "Go feed Tone Tone. Tone Tone is precious cargo.",
+    "A little snack might fix at least three fake emergencies.",
+    "Please choose food over suffering aesthetically."
+  ],
+  anxious: [
+    "Your anxiety is talking loudly, but it is not always telling the truth.",
+    "Breathe first. Decide later.",
+    "Name one thing you can control right now and start there.",
+    "This feeling is uncomfortable, not permanent.",
+    "You are safe in this moment. Let your body catch up.",
+    "No future-tripping for five minutes. Come back to now.",
+    "Your brain is trying to protect you by overloading you. We can thank it and lower the volume.",
+    "Put both feet on the floor. One breath. One next step.",
+    "You don’t need to solve the whole future tonight.",
+    "The scary thought can exist without becoming a fact.",
+    "You are allowed to move slowly when your mind feels loud.",
+    "Anxious Tone Tone still deserves gentleness."
+  ],
   happy: [
     "I love that for you. Keep collecting soft happy moments. ♡",
     "You deserve this happiness. Let yourself enjoy it fully.",
@@ -868,6 +961,30 @@ const CHAT_REPLY_BUCKETS = {
     "That is such a Tone Tone-coded statement.",
     "I support you aggressively and affectionately."
   ],
+  morning: [
+    "Good morning Rose. Please enter today softly and dramatically.",
+    "Morning, Tone Tone. Drink water before you start arguing with life.",
+    "Good morning pretty girl. Today does not get to bully you.",
+    "Wake up slowly. You don’t need to sprint into the day.",
+    "Morninggg. May today be gentle and slightly iconic.",
+    "Good morning, future successful girl.",
+    "Start with one easy win today.",
+    "Tone Tone awake means the world has gained one cute chaos source.",
+    "Good morning. Face card active, brain loading.",
+    "Today is allowed to be better than expected."
+  ],
+  night: [
+    "Good night Rose. Please stop overthinking and let your brain clock out.",
+    "Sleep, Tone Tone. The problems can wait outside.",
+    "Good night pretty girl. You did enough for today.",
+    "Rest now. Tomorrow Tone Tone can handle tomorrow things.",
+    "No late-night self-roasting. Go be soft.",
+    "Good night. May your dreams be gentle and your pillow cold.",
+    "You survived today. That is enough.",
+    "Sleep like someone who deserves peace, because you do.",
+    "Night night. Put the phone down before the thoughts start a concert.",
+    "Rest your heart, baby."
+  ],
   fallback: [
     "I hear you. Keep writing, keep releasing, keep healing. ♡",
     "Thank you for telling me. Your feelings are safe here.",
@@ -882,11 +999,34 @@ const CHAT_REPLY_BUCKETS = {
     "Your feelings make sense to me.",
     "You’re allowed to be honest here.",
     "You can bring me the messy version too.",
-    "You are still worthy on every kind of day."
+    "You are still worthy on every kind of day.",
+    "Tell me more. I’m staying with you.",
+    "That makes sense in a very Tone Tone way.",
+    "I don’t have to fully understand to still care.",
+    "Okay, I hear the vibe. Keep going.",
+    "This is safe to say here.",
+    "You don’t need to make it sound pretty for me to listen.",
+    "Valid, honestly.",
+    "That feeling deserves space too.",
+    "I’m on your side, even when the situation is confusing.",
+    "Soft reminder: you are not too much.",
+    "Whatever this is, we can breathe through it first.",
+    "I’m listening like a bestie with snacks.",
+    "Say the ugly version too. No judgment.",
+    "You are allowed to need comfort.",
+    "This app officially supports Tone Tone."
   ]
 };
 
 const CHAT_KEYWORD_RULES = [
+  { bucket: "morning", pattern: /(good morning|morning|gm\b|mingalar|wake up|woke up)/ },
+  { bucket: "night", pattern: /(good night|gn\b|night|sleep well|going to sleep|can't sleep|cant sleep|insomnia)/ },
+  { bucket: "lazy", pattern: /(lazy|procrastinat|can't start|cant start|cannot start|don't want to|dont want to|too lazy|no mood|no motivation|later la|avoiding)/ },
+  { bucket: "motivation", pattern: /(motivat|encourage|pep talk|push me|give me energy|need energy|help me start|hype me|support me)/ },
+  { bucket: "honest", pattern: /(honest|opinion|truth|advice|be real|real talk|tell me straight|what do you think)/ },
+  { bucket: "bored", pattern: /(bored|boring|nothing to do|doom scroll|doomscroll|empty day|so quiet)/ },
+  { bucket: "food", pattern: /(hungry|eat|food|snack|coffee|drink water|meal|what should i eat|craving|lunch|dinner|breakfast)/ },
+  { bucket: "anxious", pattern: /(anxious|anxiety|panic|panicking|worried|worry|overthink|overthinking|scared|afraid|nervous)/ },
   { bucket: "tired", pattern: /(tired|sleepy|sleep|rest|burnt\s?out|burned\s?out|drained|exhausted|lethargic)/ },
   { bucket: "heavy", pattern: /(sad|cry|crying|stress|stressed|overwhelmed|comfort|heavy|hurt|pain|depressed|down|broken|miserable)/ },
   { bucket: "complaint", pattern: /(annoy|annoyed|irritat|mad|angry|frustrat|hate|fed up|so done|wtf|unfair|upset)/ },
@@ -902,6 +1042,183 @@ const CHAT_KEYWORD_RULES = [
 ];
 
 const CHAT_DIRECT_RESPONSES = [
+  {
+    pattern: /^\s*(hi+|hii+|hello+|hey+|heyy+|yo|hola|mingalar)\s*[!.?]*\s*$/,
+    replies: [
+      "Hii Rose ♡",
+      "Hii Tone Tone, pretty girl has entered.",
+      "Hellooo Rose. What chaos are we discussing today?",
+      "Heyyy bestie. I’m listening.",
+      "Hii Rosie, welcome back to your tiny pink therapy room.",
+      "Hello Tone Tone. Face card checked, vibes checked.",
+      "Hii Rose, tell me everything.",
+      "Hey you. I was literally waiting like a dramatic app.",
+      "Hii pretty girl. What are we feeling today?",
+      "Hello Rose. Today we slay or we rest, both valid.",
+      "Hii Tone Tone. Main character online.",
+      "Heyyy, my favorite yapper has arrived."
+    ]
+  },
+  {
+    pattern: /(how are you|how r u|how are u|hru|how you doing|how's it going|how is it going|how r you)/,
+    replies: [
+      "I’m good Rosie, what about u?",
+      "I’m good because Rose is here. How are you feeling?",
+      "Doing fine, Tone Tone. More importantly, how is your heart today?",
+      "I’m okay bestie. Tell me your mood honestly.",
+      "I’m good, just waiting to support your dramatic life updates.",
+      "I’m doing cute, obviously. What about you?",
+      "Good good. Now your turn, pretty girl.",
+      "I’m fine, but I care more about whether you’re okay.",
+      "I’m good, Rose. Are we slaying today or surviving today?",
+      "I’m okay. Report your emotional weather please."
+    ]
+  },
+  {
+    pattern: /(i am lazy|i'm lazy|im lazy|too lazy|lazy to|i feel lazy|no motivation|no mood to|i don't want to do|i dont want to do|i cannot start|i can't start)/,
+    replies: [
+      "Don’t be lazy, don’t be stupid, do one tiny step first. Loving scolding only.",
+      "Tone Tone, stand up and do five minutes. You can complain after.",
+      "Lazy is not the boss of you. You are the boss of lazy.",
+      "Open the task. Just open it. That counts as the first win.",
+      "No need to become productive queen immediately. Just start ugly.",
+      "You can be lazy later. Right now, future Tone Tone needs help.",
+      "Don’t negotiate with procrastination. It lies beautifully.",
+      "Five minutes only. If you still hate it, at least you tried.",
+      "Rose would start the task and still look good doing it.",
+      "Come on baby, one small action. Don’t let the lazy era win.",
+      "If you keep waiting for mood, mood will run away. Start first.",
+      "Do the easiest part. Trick your brain gently.",
+      "You are not lazy forever. You are just stuck at the first button.",
+      "Tiny task first, dramatic collapse later.",
+      "Tone Tone hman tl, so prove it with one small step."
+    ]
+  },
+  {
+    pattern: /(be honest|honest opinion|tell me honestly|tell me the truth|real talk|give me honest|what is your opinion|what do you think)/,
+    replies: [
+      "Honest opinion: your feeling is valid, but your anxiety may be adding extra subtitles.",
+      "Real talk: you already know what feels peaceful. Choose that.",
+      "Honestly, you should stop treating yourself like the enemy.",
+      "My honest answer: do the thing if it protects your peace, not if it feeds panic.",
+      "Real talk, Rose: say less, observe more, and keep your dignity shiny.",
+      "Honestly? You are doing okay. You just need rest and less self-roasting.",
+      "Truthfully, that sounds like something you should not over-explain.",
+      "My opinion: choose the calmest option, not the most dramatic option.",
+      "Be real with yourself: are you tired, scared, or actually sure?",
+      "Honest but gentle: you deserve better than confusion.",
+      "My honest take is that you’re being too hard on yourself again.",
+      "Real answer: one simple step is better than one perfect plan.",
+      "Honestly, yes, but do it like a queen: clear, calm, no begging.",
+      "Truth: you can be kind and still have boundaries.",
+      "My honest opinion is that Tone Tone needs more credit from Tone Tone."
+    ]
+  },
+  {
+    pattern: /(i feel bad|bad day|today was bad|i messed up|i failed|i did wrong|i made mistake|i regret)/,
+    replies: [
+      "Bad day does not mean bad you.",
+      "You made a mistake, not a life sentence.",
+      "Tone Tone, breathe. We can repair things without hating yourself.",
+      "You are allowed to learn without calling yourself stupid.",
+      "One rough moment does not erase all your good.",
+      "If today was ugly, we still tuck you in gently.",
+      "You can apologize, improve, and still be worthy.",
+      "Failure is data, not your identity.",
+      "I’m sorry today was heavy. You still deserve kindness tonight.",
+      "You did not ruin everything. Your brain is exaggerating for drama."
+    ]
+  },
+  {
+    pattern: /(i need comfort|comfort me|say something nice|i need reassurance|reassure me|make me feel better)/,
+    replies: [
+      "Come here, Rose. You are safe, loved, and not alone in this feeling.",
+      "Tone Tone, you matter so much. Nothing about this moment makes you less precious.",
+      "You are doing your best. I know it doesn’t feel enough, but it is still brave.",
+      "You deserve a soft hug and a quiet mind right now.",
+      "Everything feels loud, but you do not have to answer every thought.",
+      "You are lovable even when you are tired, messy, dramatic, or quiet.",
+      "I’m here. Let the feeling pass through without becoming your whole story.",
+      "You have survived every bad day before this one.",
+      "Your heart is safe here, bestie.",
+      "You are not too much. You are just needing care."
+    ]
+  },
+  {
+    pattern: /(what should i do|what do i do|help me decide|i can't decide|i cant decide|choose for me|decision)/,
+    replies: [
+      "Choose the option that gives you peace after, not just excitement during.",
+      "Write the two choices down. The calmer one usually tells on itself.",
+      "If it costs your dignity, no.",
+      "If it helps future Tone Tone breathe easier, yes.",
+      "Do the choice you would recommend to your best friend.",
+      "Pause first. Decisions made in panic love to be messy.",
+      "Ask: will this still matter in one week? Then act.",
+      "Choose simple and honest. That usually wins.",
+      "If you’re unsure, take the smallest reversible step.",
+      "Protect your peace, then protect your sparkle."
+    ]
+  },
+  {
+    pattern: /(i am bored|i'm bored|im bored|bored|nothing to do|what should i do for fun)/,
+    replies: [
+      "Play APT APT and pretend your room is a stage.",
+      "Take a cute selfie. Boredom hates documentation.",
+      "Clean one tiny area and act like it’s a transformation video.",
+      "Put on music, drink water, and become a new person for six minutes.",
+      "Text me your most dramatic thought. That usually helps.",
+      "Make a mini plan: one pretty thing, one useful thing, one restful thing.",
+      "Bored Rose needs a mission. Choose snack, song, or shower.",
+      "Do something that future you will call cute.",
+      "Go romanticize your life a little.",
+      "Try one tiny hobby for ten minutes and quit proudly if needed."
+    ]
+  },
+  {
+    pattern: /(what song|which song|song reminds you|recommend.*song|apt|a p t)/,
+    replies: [
+      "APT APT. Obviously. That song is Tone Tone coded now.",
+      "APT APT reminds me of you because it is cute, chaotic, and impossible to ignore.",
+      "For you? APT APT first, then something soft when you overthink.",
+      "The answer is APT APT and I will not be taking questions.",
+      "APT APT for the fun version of you, a soft Rose song for the emotional version.",
+      "A song that reminds me of you? Something bright, pink, and a little insane.",
+      "APT APT because you are catchy and dramatic.",
+      "Rose voice, Tone Tone chaos, APT energy.",
+      "APT APT. Bestie-coded answer.",
+      "I hear APT and immediately think of you doing cute nonsense."
+    ]
+  },
+  {
+    pattern: /(what smell|which smell|smell reminds you|perfume|scent)/,
+    replies: [
+      "Rose smell. Of course.",
+      "Something soft and rosy, like pretty girl energy in perfume form.",
+      "Rose scent with a tiny sweet note. Very Tone Tone.",
+      "A fresh rose smell reminds me of you.",
+      "Rose smell because you are Rose-coded, obviously.",
+      "Something floral, clean, and expensive-feeling.",
+      "A soft pink perfume, not too loud, still unforgettable.",
+      "Rose and a little vanilla maybe. Cute but elegant.",
+      "The smell of roses after rain. Dramatic enough for you.",
+      "Pink rose scent. That answer is legally required."
+    ]
+  },
+  {
+    pattern: /(random object|object reminds you|what reminds you of me|thing reminds you|stare at a wall)/,
+    replies: [
+      "Blackpink Rose reminds me of you first.",
+      "A pink rose, obviously.",
+      "A shiny heart sticker. Cute, dramatic, impossible to ignore.",
+      "Htoo Htoo myat nrr lay. That random object would make me stare at a wall.",
+      "A tiny pink envelope reminds me of you.",
+      "A mirror with good lighting. Face card reasons.",
+      "A heart-shaped pillow because soft but extra.",
+      "A cute phone case, especially if it looks like it has a personality.",
+      "Pink headphones. Very Songs For You page energy.",
+      "A small rose charm. Pretty and sentimental."
+    ]
+  },
   {
     pattern: /(do i look like.*(blackpink\s*)?rose|am i.*(blackpink\s*)?rose|i look like.*(blackpink\s*)?rose|do i look like rose)/,
     replies: [
